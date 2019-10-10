@@ -33,7 +33,7 @@ class Api::V1::ImagesController < ApplicationController
         rescue => exception
             puts exception
             obj_return["success"]=false
-            obj_return["message"]="Could not load random images #{exception.message}"
+            obj_return["message"]="Could not load images #{exception.message}"
         end
 
         render :json => obj_return, :status => 200
@@ -79,7 +79,7 @@ class Api::V1::ImagesController < ApplicationController
             rescue => exception
             puts exception
             obj_return["success"]=false
-            obj_return["message"]="Could not load random images #{exception.message}"
+            obj_return["message"]="Could not like photo #{exception.message}"
         end
 
         render :json => obj_return, :status => 200
@@ -103,7 +103,7 @@ class Api::V1::ImagesController < ApplicationController
             rescue => exception
             puts exception
             obj_return["success"]=false
-            obj_return["message"]="Could not load random images #{exception.message}"
+            obj_return["message"]="Could not unlike photo #{exception.message}"
         end
 
         render :json => obj_return, :status => 200
@@ -124,7 +124,7 @@ class Api::V1::ImagesController < ApplicationController
         rescue => exception
             puts exception
             obj_return["success"]=false
-            obj_return["message"]="Could not load random images #{exception.message}"
+            obj_return["message"]="Could not load user favs images #{exception.message}"
         end
 
         render :json => obj_return, :status => 200
